@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_back"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="10dp"
+    tools:context=".Create_Activity">
+
+    <RelativeLayout
+        android:id="@+id/layout_create_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/text_primary" />
+        <ImageView
+            android:id="@+id/submit_create"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_baseline_check_24"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            app:tint="@color/inactive" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_create_1"
+        android:layout_marginTop="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/title_create_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="@color/text_primary"
+            android:hint="Title"
+            android:textStyle="bold"
+            android:maxLength="100"
+            android:background="@android:color/transparent"
+            android:padding="12dp"/>
+
+        <ImageView
+            android:id="@+id/image_add_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_outline_add_photo_alternate_24"
+            app:tint="@color/colorAccent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_create"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="1.5dp"
+            app:cardCornerRadius="12dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1.5dp">
+            <ImageView
+                android:id="@+id/image_create"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+                <ImageView
+                    android:id="@+id/cancel_btn_create"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="12dp"
+                    android:src="@drawable/ic_round_cancel_24"
+                    app:tint="@color/red" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/notes_create_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:textSize="16.5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_secondary"
+            android:hint="Enter your notes here"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/recyclerView_main"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
